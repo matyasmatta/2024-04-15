@@ -114,13 +114,10 @@ def graph_plot_2d(items=1000):
                     array += generate_random_array(items)
                     return array
 
-        
         array_x = subupdate(array_x)
         array_y = subupdate(array_y)
         array_x_list = array_x.tolist()
         array_y_list = array_y.tolist()
-
-
 
         for i, item in enumerate(colour_list):
             if item == GREEN:
@@ -144,12 +141,12 @@ def graph_plot_2d(items=1000):
             text_rect = text.get_rect(bottomleft=(20, WINDOW_HEIGHT - 0.4*HISTOGRAM_HEIGHT))
             screen.blit(text, text_rect)
 
-
-
     # running loop
     array_x = generate_zero_array(items)
     array_y = generate_zero_array(items)
+
     if DYNAMIC_COLOURS: colour_list = [RED for _ in range(items)]
+
     epoch = int()
     performance_list = list()
     pass_list = list()
